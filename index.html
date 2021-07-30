@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-32x32.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="./favicons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flip Digital Clock</title>
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li><button class="tab" onclick="openTab(event, 'clock')">CLOCK</button></li>
+            <li><button class="tab" onclick="openTab(event, 'timer')">TIMER</button></li>
+        </ul>
+    </nav>
+    <div id="clock" class="tabcontent clock">
+        <div class="clock_Base">
+            <div class="block1">
+                <div id="hour" class="base"></div>
+                <div id="minute" class="base"></div>
+            </div>
+            <div class="block2">
+                <div id="second" class="base"></div>
+                <div id="session" class="base"></div>
+            </div>
+        </div>
+    </div>
+    <div id="timer" class="tabcontent timer">
+        <div class="dial">
+            <div id="dialClick" class="subDial">
+                <div class="base-timer">
+                    <svg class="svg-container" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <g class="svg-circle">
+                        <circle class="svg-background-circle" cx="50" cy="50" r="45" />
+                        <path
+                            id="svg-timer-circle"
+                            stroke-dasharray="283"
+                            class="svg-timer-circle"
+                            d="M 50, 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span id="timer_label" class="timer_label"></span>
+                    <span id="condition" class="condition"></span>
+                </div>
+            </div>
+        </div>
+        <button id="setting" class="setting"><img src="./icons/setting_icon.svg" alt="setting_icon"></button>
+        <div id="settingModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Settings</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>TIME</h2>
+                    <form method="POST" id="timeform">
+                        <span class="timeinput">
+                            <label for="minutes">Minutes:</label>
+                            <input type="number" id="minutes" name="minutes" min="0" max="25" placeholder="25">
+                        </span>
+                        <span class="timeinput">
+                            <label for="seconds">Seconds:</label>
+                            <input type="number" id="seconds" name="seconds" min="0" max="59" placeholder="0">
+                        </span>
+                        <div class="colors">
+                            <h2>COLOR</h2>
+                            <span class="color_input">
+                                <input type="radio" id="color1" name="coloring" value="#00ffff" checked>
+                                <input type="radio" id="color2" name="coloring" value="#00ff2a">
+                                <input type="radio" id="color3" name="coloring" value="#f1635b">
+                                <input type="radio" id="color4" name="coloring" value="orange">
+                            </span>
+                        </div>
+                    </form>
+                    <p><strong>START : </strong>Click on dial to start timer.</p>
+                    <p><strong>PAUSE : </strong>Click on dial to pause timer.</p>
+                    <p>Click on apply to confirm any change in time or color.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="timeform" class="apply">APPLY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="icon_bar">
+        <div class="out-links">
+            <a href="#"><img src="./icons/LOGO.svg" alt="sgwr-logo"/></a>
+            <a target="_blank" href="https://github.com/sushantgwr87"><img src="./icons/icons8-github.svg" alt="icon-github"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sushant-gangwar/"><img src="./icons/icons8-linkedin.svg" alt="icon-linkedin"></a>
+        </div>
+    </div>
+
+    <script src="/clock.js"></script>
+</body>
+</html>
