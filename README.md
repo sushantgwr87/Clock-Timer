@@ -1,5 +1,16 @@
 # Clock & Timer
 A Digital Clock with **flip animation** and a timer with **dial animation** for representation of time left.
+
+<p align="center">
+    <a href="https://app.netlify.com/sites/clocktimer-sg/deploys"><img src="https://api.netlify.com/api/v1/badges/ff8d093e-b6e0-4878-b828-346d5778ec52/deploy-status" alt="Javascript" height="30" style="vertical-align:top; margin:4px"></a>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript" alt="Javascript" height="30" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" height="30" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3" alt="CSS" height="30" style="vertical-align:top; margin:4px">
+</p>
+
 ## Algorithm
 ### Navigation
 Tab navigation is used to navigate from clock and timer tab vice-versa.
